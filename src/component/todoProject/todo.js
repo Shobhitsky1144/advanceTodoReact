@@ -79,7 +79,12 @@ const Todo = () => {
         setIsEditItem(id);
 
     }
-    
+     const handleKey=(e)=>{
+     if(e.keyCode === 13){
+        console.log('nhhh')
+        addItem()
+     }
+   }
 
     // remove all 
     const removeAll = () => {
