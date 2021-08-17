@@ -81,7 +81,7 @@ const Todo = () => {
     }
      const handleKey=(e)=>{
      if(e.keyCode === 13){
-        console.log('nhhh')
+        
         addItem()
      }
    }
