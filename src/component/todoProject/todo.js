@@ -65,6 +65,12 @@ const Todo = () => {
 // 3: Now update the value of the setInput with the new updated value to edit. 
 // 4: To pass the current element Id to new state variable for reference 
     
+   const handleKey=(e)=>{
+     if(e.keyCode === 13){
+        console.log('nhhh')
+        addItem()
+     }
+   }
     
     const editItem = (id) => {
         let newEditItem = items.find((elem) => {
@@ -79,12 +85,7 @@ const Todo = () => {
         setIsEditItem(id);
 
     }
-     const handleKey=(e)=>{
-     if(e.keyCode === 13){
-        
-        addItem()
-     }
-   }
+    
 
     // remove all 
     const removeAll = () => {
@@ -108,6 +109,7 @@ const Todo = () => {
                     <div className="addItems">
                         <input type="text" placeholder="✍ Add Items..."
                            value={inputData} 
+                           onKeyDown={(e)=>handleKey(e)}
                            onChange={(e) => setInputData(e.target.value) }
                         />
                         {
